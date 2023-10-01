@@ -1,7 +1,6 @@
 
 listacesso = ['S7']
 senha = '@senha12345#'
-
 espaco = 70* '.'
 
 while True:

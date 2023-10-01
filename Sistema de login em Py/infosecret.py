@@ -1,13 +1,14 @@
-
 listacesso = ['S7']
-senha = '@senha12345#'
+listsenha = ['12345']
+senhareset = '@senha12345#'
 espaco = 70* '.'
 
 while True:
     
     nomeacesso = str(input("Digite seu nome de usuario:"))
+    senhacesso = str(input("Digite sua senha:"))
     
-    if nomeacesso in listacesso:
+    if nomeacesso in listacesso and senhacesso in listsenha:
         print("Está é a informação secreta!")
         print(espaco)
         break
@@ -21,10 +22,12 @@ while True:
             dsenha = input("Digite a senha para criar sua conta:")
             print(espaco)
             
-            if dsenha == senha:
+            if dsenha == senhareset:
                 usuarionovo = input("Digite um novo usuario:")
+                senhanova = input("Digite uma nova senha:")
                 listacesso = listacesso + [usuarionovo]
-                print('Usuario Criado com sucesso!')
+                listsenha = listsenha + [senhanova]
+                print('Usuario e Senha criado com sucesso!')
                 print(espaco)
             else:
                 print("Senha invalida!")
